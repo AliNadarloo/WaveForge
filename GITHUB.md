@@ -1,7 +1,7 @@
 <!-- Made by Ali Nadarloo. -->
 # Repository and release maintenance
 
-Repository: https://github.com/AliNadarloo/waveforge-d2nn
+Repository: https://github.com/AliNadarloo/WaveForge
 
 Made by Ali Nadarloo, School of Electrical Engineering, Iran University of
 Science and Technology, Tehran, Iran. The paper and master's thesis context,

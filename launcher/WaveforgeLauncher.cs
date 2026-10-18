@@ -24,7 +24,7 @@ static class WaveforgeLauncher {
         try {
             ExtractPayload();string python=FindPython();
             if(setup || python==null) {
-                if(cli && !setup) { File.WriteAllText(Path.Combine(Home,"waveforge_error.log"),"No compatible Python found. Run Waveforge.exe --setup.");return 2; }
+                if(cli && !setup) { File.WriteAllText(Path.Combine(Home,"waveforge_error.log"),"No compatible Python found. Run WaveForge.exe --setup.");return 2; }
                 using(SetupForm form=new SetupForm(python)) { if(form.ShowDialog()!=DialogResult.OK)return 0;python=form.PythonPath; }
             }
             File.WriteAllText(Path.Combine(Home,"launcher_settings.json"),Json.Serialize(new Dictionary<string,string>{{"python",python}}));
@@ -40,12 +40,12 @@ static class WaveforgeLauncher {
                 child.ErrorDataReceived+=delegate(object s,DataReceivedEventArgs e){if(e.Data!=null)lock(errors){if(errors.Length<100000)errors.AppendLine(e.Data);}};
                 child.BeginOutputReadLine();child.BeginErrorReadLine();child.WaitForExit();
                 if(child.ExitCode!=0 && errors.Length>0)File.WriteAllText(Path.Combine(Home,"launcher_error.log"),errors.ToString());
-                if(child.ExitCode!=0 && !cli)MessageBox.Show("The app stopped. See waveforge_error.log or launcher_error.log beside the executable. Reopen setup with Waveforge.exe --setup.","Waveforge");
+                if(child.ExitCode!=0 && !cli)MessageBox.Show("The app stopped. See waveforge_error.log or launcher_error.log beside the executable. Reopen setup with WaveForge.exe --setup.","WaveForge");
                 return child.ExitCode;
             }
         } catch(Exception error) {
             try{File.WriteAllText(Path.Combine(Home,"launcher_error.log"),error.ToString());}catch{}
-            if(!cli)MessageBox.Show(error.Message+"\nKeep the app in a writable folder. See INSTALL.md.","Waveforge setup");return 1;
+            if(!cli)MessageBox.Show(error.Message+"\nKeep the app in a writable folder. See INSTALL.md.","WaveForge setup");return 1;
         }
     }
 
@@ -103,7 +103,7 @@ static class WaveforgeLauncher {
     class SetupForm:Form {
         public string PythonPath;TextBox path;Label status;Timer capture;
         public SetupForm(string python) {
-            Text="Waveforge / Python setup — Made by Ali Nadarloo";Size=new Size(820,720);MinimumSize=new Size(720,640);StartPosition=FormStartPosition.CenterScreen;
+            Text="WaveForge / Python setup — Made by Ali Nadarloo";Size=new Size(820,720);MinimumSize=new Size(720,640);StartPosition=FormStartPosition.CenterScreen;
             BackColor=Color.FromArgb(9,15,27);ForeColor=Color.FromArgb(220,230,243);Font=new Font("Segoe UI",10);
             TableLayoutPanel layout=new TableLayoutPanel{Dock=DockStyle.Fill,Padding=new Padding(24),ColumnCount=1,RowCount=6};Controls.Add(layout);
             layout.Controls.Add(new Label{Text="WAVEFORGE / LIGHTWEIGHT LAUNCHER",AutoSize=true,ForeColor=Color.Aquamarine,Font=new Font("Segoe UI",15,FontStyle.Bold)});

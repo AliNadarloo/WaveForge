@@ -11,7 +11,7 @@ import numpy as np
 import argparse
 
 ROOT=Path(__file__).resolve().parent
-EXE=ROOT/"release/Waveforge/Waveforge.exe"
+EXE=ROOT/"release/WaveForge/WaveForge.exe"
 
 
 def launch(arguments,timeout=120):

@@ -11,7 +11,7 @@ import sys
 
 
 def main():
-    parser=argparse.ArgumentParser(description="Waveforge D2NN laboratory")
+    parser=argparse.ArgumentParser(description="WaveForge D2NN laboratory")
     parser.add_argument("--preset",default="Gaussian focus")
     parser.add_argument("--config",type=Path)
     parser.add_argument("--headless",action="store_true")

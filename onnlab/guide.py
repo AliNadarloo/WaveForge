@@ -44,7 +44,7 @@ summary show the device actually used. <b>Stop &amp; export</b> saves the curren
 solution and marks the run interrupted. Results live beside the launcher in
 <code>results/</code>, with a unique folder per run.</p>
 <h3>Please cite the paper</h3>
-<p>If you use Waveforge, its code, examples or research method in your work,
+<p>If you use WaveForge, its code, examples or research method in your work,
 please cite Nadarloo, Hajiahmadi &amp; Soleimani, <i>Scientific Reports</i> (2026),
 DOI: 10.1038/s41598-026-69471-w. The full citation is under Guide → Paper &amp; citation.</p>
 ''')
@@ -55,7 +55,7 @@ GUIDE_TOPICS = {
 "Developer setup & modifying the app": "@file:DEVELOPER_GUIDE.md",
 "Complete user manual": "@file:README.md",
 "Paper & citation": '''
-<h2>Please cite the paper when using Waveforge</h2>
+<h2>Please cite the paper when using WaveForge</h2>
 <p>If you use this application, its code, examples or research method in your
 research, teaching or publications, please cite:</p>
 <p>Ali Nadarloo, Mohammad Javad Hajiahmadi &amp; Mohammad Soleimani.
@@ -241,7 +241,7 @@ amplitude and intensity, and raster versus numeric row conventions.</p>
 <p><b>Memory limit:</b> reduce cell count or choose FFT RS/ASM, then check the
 recommendation. ASM sampling and padding both increase memory.</p>
 <p><b>Cannot save:</b> extract the whole portable folder to a writable location;
-keep _internal and app_source beside Waveforge.exe.</p>
+keep _internal and app_source beside WaveForge.exe.</p>
 <h3>Reproduce the paper</h3>
 <p>Load Paper • two polarizations and retain 32×32 cells, 150 µm pitches, 1 THz,
 one surface, [1.2,10.8] λ spacings, Dense RS, zero initial phases and 3,000 Adam

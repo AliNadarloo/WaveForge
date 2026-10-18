@@ -23,13 +23,13 @@ class Loader(C.QThread):
 
 def launch(args):
     launch_start=time.perf_counter()
-    app=W.QApplication(sys.argv[:1]);app.setApplicationName("Waveforge")
+    app=W.QApplication(sys.argv[:1]);app.setApplicationName("WaveForge")
     app.setQuitOnLastWindowClosed(False)
     for font in ["segoeui.ttf","seguisb.ttf","consola.ttf","seguisym.ttf"]:
         path=Path("C:/Windows/Fonts")/font
         if path.exists():G.QFontDatabase.addApplicationFont(str(path))
     app.setFont(G.QFont("Segoe UI",10))
-    splash=W.QWidget();splash.setWindowTitle("Waveforge / initializing")
+    splash=W.QWidget();splash.setWindowTitle("WaveForge / initializing")
     splash.setFixedSize(470,230)
     splash.setStyleSheet("QWidget{background:#090f1b;color:#dce6f3;font-family:'Segoe UI';} QLabel#brand{font-size:27px;font-weight:700;color:#6af6e0;letter-spacing:3px;} QProgressBar{background:#19283e;border:0;height:5px;} QProgressBar::chunk{background:#6af6e0;}")
     layout=W.QVBoxLayout(splash);layout.setContentsMargins(35,35,35,35)
@@ -112,7 +112,7 @@ def launch(args):
     def failed(message):
         root=application_directory()
         (root/"waveforge_error.log").write_text(message,encoding="utf-8")
-        W.QMessageBox.critical(splash,"Waveforge could not start",message)
+        W.QMessageBox.critical(splash,"WaveForge could not start",message)
         app.exit(1)
 
     loader.ready.connect(loaded);loader.failed.connect(failed)

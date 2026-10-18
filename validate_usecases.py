@@ -81,7 +81,7 @@ def check_receipt(path):
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument("--prepare-only",action="store_true")
-    parser.add_argument("--exe",type=Path,default=ROOT/"release/Waveforge/Waveforge.exe");args=parser.parse_args()
+    parser.add_argument("--exe",type=Path,default=ROOT/"release/WaveForge/WaveForge.exe");args=parser.parse_args()
     qa=ROOT/"verification/eight_uses";qa.mkdir(exist_ok=True)
     cases=make_cases()
     for index,c in enumerate(cases,1):

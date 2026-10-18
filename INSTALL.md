@@ -1,9 +1,9 @@
 <!-- Made by Ali Nadarloo. -->
-# Install and run Waveforge
+# Install and run WaveForge
 
 ## The lightweight Windows executable
 
-Waveforge.exe is a small launcher containing the app's readable Python code,
+WaveForge.exe is a small launcher containing the app's readable Python code,
 guides and examples. It **does not bundle Python, PyTorch or CUDA libraries**.
 On first launch it places the editable files beside itself. Keep it in a writable
 folder, such as a folder on your Desktop. Results are saved in results/ beside it.
@@ -12,11 +12,11 @@ It looks for a compatible Python installation with NumPy, PyTorch, Matplotlib,
 Pillow and PySide6. It first checks a saved selection, WAVEFORGE_PYTHON, an adjacent
 .venv, the Python launcher, PATH, and normal per-user Python install locations.
 If none is ready, it opens a setup screen. Use Browse to select python.exe in your
-environment, then Check and start. Run Waveforge.exe --setup to reopen that screen.
+environment, then Check and start. Run WaveForge.exe --setup to reopen that screen.
 
 ## If the required packages are already installed
 
-Double-click Waveforge.exe. No new CUDA download is performed by the launcher.
+Double-click WaveForge.exe. No new CUDA download is performed by the launcher.
 Its setup screen lets you select the existing Python environment to use.
 An environment containing CPU-only PyTorch can run CPU training; a CUDA-capable
 PyTorch environment can use an NVIDIA GPU when its driver is compatible.
@@ -29,7 +29,7 @@ Python 3.12 for a new environment using those commands. Newer Python releases
 may require newer PyTorch versions from the official selector. This application
 was tested with Python 3.10.7 and PyTorch 2.5.1+cu121 on Windows.
 
-Open Terminal or PowerShell in the folder containing Waveforge.exe. Run it once
+Open Terminal or PowerShell in the folder containing WaveForge.exe. Run it once
 if necessary to extract the guides and requirements file, then enter:
 
 ```text
@@ -114,7 +114,7 @@ Python; the light executable extracts them under app_source/onnlab for editing.
 
 ## Common setup problems
 
-- Wrong Python: use Waveforge.exe --setup and Browse to your environment's python.exe.
+- Wrong Python: use WaveForge.exe --setup and Browse to your environment's python.exe.
 - Packages appear missing: install them with that exact python.exe -m pip.
 - Cannot save: move the app to a writable folder before launching.
 - Startup fails: check waveforge_error.log beside the app. The setup screen can

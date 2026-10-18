@@ -1,5 +1,5 @@
 <!-- Made by Ali Nadarloo. -->
-# Improve Waveforge
+# Improve WaveForge
 
 Made by Ali Nadarloo. Community contributions are welcome.
 

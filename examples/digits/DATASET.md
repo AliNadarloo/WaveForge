@@ -11,7 +11,7 @@ scikit-learn's `load_digits`, a copy of the UCI dataset's original test partitio
 Values were stored as uint8 (images) and int64 (labels), without altering pixels.
 https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html
 
-Waveforge makes its own deterministic stratified 80/20 training/held-out split
+WaveForge makes its own deterministic stratified 80/20 training/held-out split
 within these samples. This is an educational optical classification example,
 not a score on the original UCI benchmark split and not MNIST. Runtime loading
 needs only NumPy. Fields resize and center each image, flip raster rows for

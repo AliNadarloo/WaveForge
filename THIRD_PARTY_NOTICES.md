@@ -1,7 +1,7 @@
 <!-- Made by Ali Nadarloo. -->
 # Third-party material
 
-Made by Ali Nadarloo applies to the Waveforge application and integration work.
+Made by Ali Nadarloo applies to the WaveForge application and integration work.
 The MIT license in LICENSE covers that application code. It does not replace
 licenses or authorship of separately supplied data, reference snapshots or
 installed dependencies.

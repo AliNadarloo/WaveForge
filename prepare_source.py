@@ -20,8 +20,8 @@ def main():
     # Local reference snapshots retain their original authorship and license scope.
     for file in (ROOT/"reference").rglob("*.py"):
         text=file.read_text(encoding="utf-8-sig")
-        if "Waveforge integration: Made by Ali Nadarloo" not in text[:200]:
-            file.write_text("# Waveforge integration: Made by Ali Nadarloo.\n# Original reference source and existing author notices follow.\n"+text,encoding="utf-8")
+        if "WaveForge integration: Made by Ali Nadarloo" not in text[:200]:
+            file.write_text("# WaveForge integration: Made by Ali Nadarloo.\n# Original reference source and existing author notices follow.\n"+text,encoding="utf-8")
     for folder in [ROOT,ROOT/"examples/digits"]:
         for file in folder.glob("*.md"):
             text=file.read_text(encoding="utf-8-sig")

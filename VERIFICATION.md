@@ -1,5 +1,5 @@
 <!-- Made by Ali Nadarloo. -->
-# Waveforge validation
+# WaveForge validation
 
 Validation results are summarized in `verification/public_summary.json`.
 Optional paper-reference comparisons run when the required fixtures are available.

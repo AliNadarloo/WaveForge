@@ -1,13 +1,13 @@
 # Made by Ali Nadarloo.
 cff-version: 1.2.0
-message: "If you use Waveforge, its code, examples or research method in your work, please cite the associated paper. You may also cite this software."
+message: "If you use WaveForge, its code, examples or research method in your work, please cite the associated paper. You may also cite this software."
 type: software
-title: "Waveforge: Optical Neural Networks and D2NN Design Lab"
+title: "WaveForge: Optical Neural Networks and D2NN Design Lab"
 version: 1.1.2
 date-released: 2026-10-18
 license: MIT
-url: "https://github.com/AliNadarloo/waveforge-d2nn"
-repository-code: "https://github.com/AliNadarloo/waveforge-d2nn"
+url: "https://github.com/AliNadarloo/WaveForge"
+repository-code: "https://github.com/AliNadarloo/WaveForge"
 authors:
   - family-names: Nadarloo
     given-names: Ali

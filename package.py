@@ -1,6 +1,6 @@
 # Made by Ali Nadarloo.
 # SPDX-License-Identifier: MIT
-"""Create Windows and source downloads from a built Waveforge checkout."""
+"""Create Windows and source downloads from a built WaveForge checkout."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -30,7 +30,7 @@ def write_zip(target, files):
     """Use one top-level folder and validate every archived file's CRC."""
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for source, relative in sorted(files, key=lambda item: str(item[1])):
-            z.write(source, (Path("Waveforge") / relative).as_posix())
+            z.write(source, (Path("WaveForge") / relative).as_posix())
     with zipfile.ZipFile(target) as z:
         if z.testzip() is not None:
             raise RuntimeError(f"Archive integrity check failed: {target.name}")
@@ -51,27 +51,27 @@ def source_files():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--release-root", type=Path, default=ROOT / "release/Waveforge")
+    parser.add_argument("--release-root", type=Path, default=ROOT / "release/WaveForge")
     parser.add_argument("--output", type=Path, default=ROOT / "delivery")
     args = parser.parse_args()
     portable, output = args.release_root.resolve(), args.output.resolve()
-    executable = portable / "Waveforge.exe"
+    executable = portable / "WaveForge.exe"
     manifest = json.loads((portable / "app_source/distribution.json").read_text())
     if not executable.is_file():
-        raise RuntimeError("Build Waveforge before packaging.")
+        raise RuntimeError("Build WaveForge before packaging.")
     for relative, expected in manifest.items():
         distributed = portable / relative
         source_relative = relative.removeprefix("app_source/")
         if sha256(distributed) != expected or sha256(ROOT / source_relative) != expected:
             raise RuntimeError(f"Build is out of date: {relative}. Run build.py again.")
     output.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(executable, output / "Waveforge.exe")
-    windows = [(executable, Path("Waveforge.exe"))]
+    shutil.copyfile(executable, output / "WaveForge.exe")
+    windows = [(executable, Path("WaveForge.exe"))]
     windows.extend((portable / name, Path(name)) for name in manifest)
     windows.append((portable / "app_source/distribution.json", Path("app_source/distribution.json")))
-    write_zip(output / "Waveforge-Windows.zip", windows)
-    write_zip(output / "Waveforge-source.zip", source_files())
-    downloads = ["Waveforge.exe", "Waveforge-Windows.zip", "Waveforge-source.zip"]
+    write_zip(output / "WaveForge-Windows.zip", windows)
+    write_zip(output / "WaveForge-source.zip", source_files())
+    downloads = ["WaveForge.exe", "WaveForge-Windows.zip", "WaveForge-source.zip"]
     checksums = "".join(f"{sha256(output / name)}  {name}\n" for name in downloads)
     (output / "SHA256SUMS.txt").write_text(checksums, encoding="utf-8")
     print(f"Packages and SHA-256 checksums: {output}")

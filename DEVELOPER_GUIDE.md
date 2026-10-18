@@ -1,5 +1,5 @@
 <!-- Made by Ali Nadarloo. -->
-# Make Waveforge your own
+# Make WaveForge your own
 
 Made by Ali Nadarloo.
 
@@ -109,19 +109,19 @@ These measurements do not claim the same speedup for an entire training run.
 
 ```text
 python -m pytest tests -q
-python build.py --output release/Waveforge
+python build.py --output release/WaveForge
 python verify_executable.py
 python validate_usecases.py
 ```
 
-`build.py` creates `release_next/Waveforge/` by default; pass `--output` to choose
+`build.py` creates `release_next/WaveForge/` by default; pass `--output` to choose
 another folder. It uses Windows' .NET Framework C# compiler to compile the small
 launcher and embeds a compressed app payload. No PyInstaller or third-party
 compiler package is needed. Python, Qt, PyTorch and CUDA remain external. The
 launcher extracts files with path containment checks, detects Python with the
 required packages and preserves user-edited files using recorded content hashes.
 WAVEFORGE_HOME points to the launcher directory; WAVEFORGE_PYTHON can select an
-existing environment. `Waveforge.exe --setup` opens its environment/setup guide.
+existing environment. `WaveForge.exe --setup` opens its environment/setup guide.
 If upgrading PyTorch, repeat numerical and executable checks. The optional original-paper
 reference snapshots are for review and regression tests only.
 
@@ -155,7 +155,7 @@ be exported again with a different appearance, reusing the completed model.
 `digit_export.py` retains discrete confusion-matrix cells and styles its plots
 with the same palette. `tests/test_plot_appearance.py` checks all four themes.
 
-Build the Windows launcher with `python build.py --output release/Waveforge`.
+Build the Windows launcher with `python build.py --output release/WaveForge`.
 Then run `python package.py` to create the EXE, Windows ZIP, source ZIP and
 `SHA256SUMS.txt` in `delivery/`. Python and the numerical runtime stay external.
 Packaging checks the distributed files against the build manifest and checks each ZIP.

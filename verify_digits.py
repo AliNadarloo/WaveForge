@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parent
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument("--exe",type=Path,default=ROOT/"release/Waveforge/Waveforge.exe")
+    parser=argparse.ArgumentParser();parser.add_argument("--exe",type=Path,default=ROOT/"release/WaveForge/WaveForge.exe")
     args=parser.parse_args();folder=ROOT/"verification/digit_use";folder.mkdir(exist_ok=True)
     config=preset("Advanced • four-layer digit router")
     config_file=folder/"experiment.json";config_file.write_text(json.dumps(config.to_dict(),indent=2,ensure_ascii=False),encoding="utf-8")

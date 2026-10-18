@@ -15,7 +15,7 @@ DOCS=["README.md","INSTALL.md","LOSS_GUIDE.md","DEVELOPER_GUIDE.md","VERIFICATIO
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument("--output",type=Path,default=ROOT/"release_next/Waveforge")
+    parser=argparse.ArgumentParser();parser.add_argument("--output",type=Path,default=ROOT/"release_next/WaveForge")
     output=parser.parse_args().output.resolve();output.mkdir(parents=True,exist_ok=True)
     work=ROOT/"build_light";work.mkdir(exist_ok=True)
     payload={"app_source/main.py":ROOT/"main.py"}
@@ -28,7 +28,7 @@ def main():
     with zipfile.ZipFile(archive,"w",zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for relative,file in payload.items():z.write(file,relative)
     compiler=Path("C:/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe")
-    command=[str(compiler),"/nologo","/target:winexe","/optimize+","/out:"+str(output/"Waveforge.exe"),
+    command=[str(compiler),"/nologo","/target:winexe","/optimize+","/out:"+str(output/"WaveForge.exe"),
              "/resource:"+str(archive)+",Waveforge.payload.zip",
              "/reference:System.Windows.Forms.dll","/reference:System.Drawing.dll",
              "/reference:System.IO.Compression.dll","/reference:System.IO.Compression.FileSystem.dll",
@@ -39,7 +39,7 @@ def main():
         target=output/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,target)
         manifest[relative]=hashlib.sha256(file.read_bytes()).hexdigest()
     (output/"app_source/distribution.json").write_text(json.dumps(manifest,indent=2))
-    print(json.dumps(dict(executable=str(output/"Waveforge.exe"),bytes=(output/"Waveforge.exe").stat().st_size,
+    print(json.dumps(dict(executable=str(output/"WaveForge.exe"),bytes=(output/"WaveForge.exe").stat().st_size,
                           payload_files=len(payload),bundled_python=False,bundled_cuda=False),indent=2))
 
 

@@ -1,7 +1,7 @@
 <!-- Made by Ali Nadarloo. -->
-# Waveforge — Optical Neural Networks & D2NN Design Lab
+# WaveForge — Optical Neural Networks & D2NN Design Lab
 
-[![Tests and Windows build](https://github.com/AliNadarloo/waveforge-d2nn/actions/workflows/checks.yml/badge.svg)](https://github.com/AliNadarloo/waveforge-d2nn/actions/workflows/checks.yml)
+[![Tests and Windows build](https://github.com/AliNadarloo/WaveForge/actions/workflows/checks.yml/badge.svg)](https://github.com/AliNadarloo/WaveForge/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-007b78.svg)](LICENSE)
 [![Paper DOI](https://img.shields.io/badge/Paper-10.1038%2Fs41598--026--69471--w-5c64b6)](https://doi.org/10.1038/s41598-026-69471-w)
 
@@ -14,11 +14,11 @@ Developed from the computational work for the paper below and Ali Nadarloo's
 master's thesis research. The application extends that research workflow with
 editable Python objectives, multiple propagation methods and reusable examples.
 
-**Get started:** [Download the Windows app](https://github.com/AliNadarloo/waveforge-d2nn/releases/latest) ·
+**Get started:** [Download the Windows app](https://github.com/AliNadarloo/WaveForge/releases/latest) ·
 [Install](INSTALL.md) · [Write a loss function](LOSS_GUIDE.md) ·
 [Develop](DEVELOPER_GUIDE.md) · [Contribute](CONTRIBUTING.md)
 
-![Waveforge optical neural network workspace](docs/images/workspace.png)
+![WaveForge optical neural network workspace](docs/images/workspace.png)
 
 - **ONN / D2NN design:** configurable cell counts, rectangular pitches, frequencies,
   layer counts and individual propagation distances, including the output plane.
@@ -49,7 +49,7 @@ This application trains scalar diffractive models. Full-wave electromagnetic
 validation and a fabricated unit-cell response require separate tools and data;
 the app's ideal phase-design metrics are distinct from the paper's full-wave metrics.
 See [verification](VERIFICATION.md), [citation files](CITATION.cff) and
-[BibTeX](CITATION.bib). **If you use Waveforge, its code, examples or research method in your work,
+[BibTeX](CITATION.bib). **If you use WaveForge, its code, examples or research method in your work,
 please cite this paper.**
 
 MIT licensed. Community improvements are welcome. Dataset and reference credits
@@ -57,10 +57,10 @@ are separate; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Start
 
-**Lightweight Windows release:** run `Waveforge.exe` in a writable folder. It
+**Lightweight Windows release:** run `WaveForge.exe` in a writable folder. It
 extracts readable code, guides and examples beside itself and uses an existing
 Python environment. Python, PyTorch and CUDA libraries are **not bundled**.
-Run `Waveforge.exe --setup` to choose Python or read installation steps.
+Run `WaveForge.exe --setup` to choose Python or read installation steps.
 See [INSTALL.md](INSTALL.md) for complete CPU/GPU setup and a GPU verification
 command. CUDA-enabled PyTorch and a compatible NVIDIA driver enable GPU use;
 CPU-only PyTorch works for CPU training. CUDA Toolkit alone is insufficient.

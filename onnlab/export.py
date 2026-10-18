@@ -77,7 +77,7 @@ def export_result(result, base=None, directory=None,plot_settings=None):
     if hasattr(result,"channels"):
         for i,channel in enumerate(result.channels,1):
             export_result(channel,directory=out/f"Polarization_{i}",plot_settings=prefs)
-        summary=dict(application="Waveforge 1.1.2",polarization_count=2,metrics=result.metrics,
+        summary=dict(application="WaveForge 1.1.2",polarization_count=2,metrics=result.metrics,
                      device=result.device,seconds=result.seconds,cancelled=result.cancelled,
                      channels_completed=len(result.channels),plot_errors=[],
                      note="Independent scalar channels; polarization basis is determined by physical unit-cell design.")
@@ -159,7 +159,7 @@ def export_result(result, base=None, directory=None,plot_settings=None):
             plot_errors.append(f"{name}: {exc}")
     if custom:
         np.savez_compressed(out/"custom_plots.npz",**custom)
-    summary=dict(application="Waveforge 1.1.2",device=result.device,torch=torch.__version__,
+    summary=dict(application="WaveForge 1.1.2",device=result.device,torch=torch.__version__,
                  seconds=result.seconds,epochs_completed=len(result.history),cancelled=result.cancelled,
                  metrics=result.metrics,truth_table=report,plot_errors=plot_errors,
                  note="Scalar phase-only design; exp(+iωt), outgoing exp(-ikR). No full-wave or polarization coupling simulation.")
