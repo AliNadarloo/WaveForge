@@ -1,0 +1,38 @@
+# Made by Ali Nadarloo.
+cff-version: 1.2.0
+message: "If you use Waveforge, its code, examples or research method in your work, please cite the associated paper. You may also cite this software."
+type: software
+title: "Waveforge: Optical Neural Networks and D2NN Design Lab"
+version: 1.1.1
+date-released: 2026-10-18
+license: MIT
+url: "https://github.com/AliNadarloo/waveforge-d2nn"
+repository-code: "https://github.com/AliNadarloo/waveforge-d2nn"
+authors:
+  - family-names: Nadarloo
+    given-names: Ali
+    affiliation: "School of Electrical Engineering, Iran University of Science and Technology, Tehran, Iran"
+keywords:
+  - optical neural networks
+  - diffractive deep neural networks
+  - D2NN
+  - metasurface
+  - optical logic gates
+  - Rayleigh-Sommerfeld propagation
+  - angular spectrum method
+preferred-citation:
+  type: article
+  title: "A single passive terahertz metasurface implementing eight Boolean logic gates through polarization multiplexing"
+  authors:
+    - family-names: Nadarloo
+      given-names: Ali
+    - family-names: Hajiahmadi
+      given-names: Mohammad Javad
+    - family-names: Soleimani
+      given-names: Mohammad
+  journal: Scientific Reports
+  year: 2026
+  month: 9
+  day: 6
+  doi: 10.1038/s41598-026-69471-w
+  url: "https://www.nature.com/articles/s41598-026-69471-w"

@@ -1,0 +1,6 @@
+# Made by Ali Nadarloo.
+numpy>=1.24,<2
+matplotlib>=3.7,<4
+Pillow>=10,<13
+PySide6>=6.8,<7
+# Install CPU or CUDA-enabled PyTorch separately; see INSTALL.md.

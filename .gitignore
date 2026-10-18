@@ -1,0 +1,28 @@
+# Made by Ali Nadarloo.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+build*/
+release*/
+delivery/
+results/
+preserved_user_files/
+*.exe
+*.dll
+*.zip
+*.spec
+*_error.log
+launcher_settings.json
+ui_preferences.json
+# Local paper snapshots are optional audit fixtures, not part of the public runtime.
+reference/
+# Keep public verification summaries, not large runs or local-machine manifests.
+verification/**
+!verification/README.md
+!verification/public_summary.json

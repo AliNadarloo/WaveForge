@@ -1,0 +1,13 @@
+# Made by Ali Nadarloo.
+name: Feature or improvement
+description: Suggest a clearer workflow or a useful optical design capability.
+body:
+  - type: textarea
+    attributes:
+      label: User problem or optical use case
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Suggested behavior
+      description: Include an example of how it would be used and checked.

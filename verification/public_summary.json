@@ -1,0 +1,158 @@
+{
+  "application": "Waveforge 1.1.1",
+  "author": "Ali Nadarloo",
+  "license": "MIT",
+  "tests": 53,
+  "executable_bytes": 450048,
+  "bundled_cuda": false,
+  "bundled_python": false,
+  "experiments": [
+    {
+      "name": "01 Gaussian focusing / 0.3 THz",
+      "frequency_thz": 0.3,
+      "device": "cuda",
+      "metrics": {
+        "final_loss": 0.8200470805168152,
+        "initial_loss": 9.605998992919922,
+        "captured_power": 0.9655570983886719
+      },
+      "ui_gap_p95_ms": 79.14660000096774
+    },
+    {
+      "name": "02 Beam steering / 0.6 THz",
+      "frequency_thz": 0.6,
+      "device": "cuda",
+      "metrics": {
+        "final_loss": 3.202545121894218e-05,
+        "initial_loss": 9.00000286102295,
+        "centroid_x_wavelengths": 2.9943408966064453
+      },
+      "ui_gap_p95_ms": 119.34130000008736
+    },
+    {
+      "name": "03 Text hologram / 0.8 THz",
+      "frequency_thz": 0.8,
+      "device": "cuda",
+      "metrics": {
+        "final_loss": 0.9384452104568481,
+        "initial_loss": 5.594602584838867,
+        "captured_power": 0.5457977652549744
+      },
+      "ui_gap_p95_ms": 102.67349999776343
+    },
+    {
+      "name": "04 OAM conversion / 1.2 THz",
+      "frequency_thz": 1.2,
+      "device": "cuda",
+      "metrics": {
+        "final_loss": 0.0022038817405700684,
+        "initial_loss": 0.9999743700027466,
+        "target_angular_purity": 0.9990392923355103
+      },
+      "ui_gap_p95_ms": 112.69199999878765
+    },
+    {
+      "name": "05 Image aperture focus / visible light",
+      "frequency_thz": 473.6,
+      "device": "cuda",
+      "metrics": {
+        "final_loss": 0.0070114098489284515,
+        "initial_loss": 10.379164695739746,
+        "captured_power": 0.7093649506568909
+      },
+      "ui_gap_p95_ms": 101.9534000006388
+    },
+    {
+      "name": "06 Two-plane focus / 0.9 THz",
+      "frequency_thz": 0.9,
+      "device": "cuda",
+      "metrics": {
+        "final_loss": 0.06810611486434937,
+        "initial_loss": 1.2382317781448364
+      },
+      "ui_gap_p95_ms": 102.08179999972344
+    },
+    {
+      "name": "07 Independent dual polarization / 0.1 THz",
+      "frequency_thz": 0.1,
+      "device": "cuda, cuda",
+      "metrics": {
+        "P1_final_loss": 0.042660392820835114,
+        "P1_initial_loss": 30.034358978271484,
+        "P1_captured_power": 0.7450111508369446,
+        "P2_final_loss": 0.0020984411239624023,
+        "P2_initial_loss": 0.9999692440032959,
+        "P2_target_angular_purity": 0.9991743564605713
+      },
+      "ui_gap_p95_ms": 114.98550000032992
+    },
+    {
+      "name": "Paper • two polarizations",
+      "frequency_thz": 1.0,
+      "device": "cuda, cuda",
+      "metrics": {
+        "P1_final_loss": 0.01299606915563345,
+        "P1_initial_loss": 0.8733199834823608,
+        "P1_accuracy": 1.0,
+        "P1_outside_fraction": 0.11478623747825623,
+        "P2_final_loss": 0.030661290511488914,
+        "P2_initial_loss": 1.0927834510803223,
+        "P2_accuracy": 1.0,
+        "P2_outside_fraction": 0.17001408338546753
+      },
+      "ui_gap_p95_ms": 115.70560000109253
+    }
+  ],
+  "digit_metrics": {
+    "initial_loss": 4.955630609488454,
+    "final_loss": 0.8416526720487358,
+    "training_accuracy": 0.9436717663421419,
+    "heldout_accuracy": 0.9303621169916435,
+    "training_samples": 1438,
+    "heldout_samples": 359,
+    "mean_correct_detector_fraction": 0.4433242678642273,
+    "preview_batch_accuracy": 0.9000000357627869
+  },
+  "digit_ui_gap_p95_ms": 119.23209999804385,
+  "paper_doi": "10.1038/s41598-026-69471-w",
+  "affiliation": "School of Electrical Engineering, Iran University of Science and Technology, Tehran, Iran",
+  "phase_comparison": [
+    {
+      "polarization": 1,
+      "max_phase_difference_rad": 0.0009284421490265199,
+      "rms_phase_difference_rad": 8.259020756251109e-05
+    },
+    {
+      "polarization": 2,
+      "max_phase_difference_rad": 0.00036939258302861667,
+      "rms_phase_difference_rad": 2.484800231830338e-05
+    }
+  ],
+  "executable_checks": [
+    {
+      "test": "GPU",
+      "passed": true,
+      "device": "cuda"
+    },
+    {
+      "test": "CPU",
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "test": "Dual GPU",
+      "passed": true,
+      "device": "cuda, cuda"
+    },
+    {
+      "test": "ASM GPU",
+      "passed": true,
+      "device": "cuda"
+    },
+    {
+      "test": "Windows launcher + Qt GUI: training + plots + export",
+      "passed": true,
+      "device": null
+    }
+  ]
+}

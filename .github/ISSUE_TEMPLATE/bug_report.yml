@@ -1,0 +1,18 @@
+# Made by Ali Nadarloo.
+name: Bug report
+description: Report a reproducible problem with setup, training, export or the interface.
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include expected behavior and steps to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Experiment and environment
+      description: App version, Python/PyTorch version, CPU or GPU, solver and a minimal config/loss if relevant.
+  - type: textarea
+    attributes:
+      label: Evidence
+      description: A screenshot, relevant error text or measured result.
