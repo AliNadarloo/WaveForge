@@ -1,5 +1,4 @@
 <!-- Made by Ali Nadarloo. -->
-# Public verification
+# Validation results
 
-public_summary.json contains measured release outcomes without local machine paths.
-The full source audit ZIP contains additional tests, receipts and screenshots.
+Measured validation results are available in `public_summary.json`.
