@@ -1,9 +1,9 @@
 {
-  "application": "Waveforge 1.1.1",
+  "application": "Waveforge 1.1.2",
   "author": "Ali Nadarloo",
   "license": "MIT",
   "tests": 53,
-  "executable_bytes": 450048,
+  "executable_bytes": 449536,
   "bundled_cuda": false,
   "bundled_python": false,
   "experiments": [
@@ -151,8 +151,7 @@
     },
     {
       "test": "Windows launcher + Qt GUI: training + plots + export",
-      "passed": true,
-      "device": null
+      "passed": true
     }
   ]
 }

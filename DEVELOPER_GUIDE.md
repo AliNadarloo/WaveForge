@@ -155,7 +155,7 @@ be exported again with a different appearance, reusing the completed model.
 `digit_export.py` retains discrete confusion-matrix cells and styles its plots
 with the same palette. `tests/test_plot_appearance.py` checks all four themes.
 
-The clean public checkout can build with `python build.py --output release/Waveforge`.
-Distribute that output folder as a ZIP; its Python/numerical runtime stays external.
-The optional local audit packaging scripts require additional private verification
-fixtures and are not needed to run, develop, test or build the application.
+Build the Windows launcher with `python build.py --output release/Waveforge`.
+Then run `python package.py` to create the EXE, Windows ZIP, source ZIP and
+`SHA256SUMS.txt` in `delivery/`. Python and the numerical runtime stay external.
+Packaging checks the distributed files against the build manifest and checks each ZIP.

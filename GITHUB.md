@@ -23,19 +23,8 @@ Keep changes focused and explain measured optical or interface behavior.
    field interpolation must not smooth physical metasurface phase cells.
 3. Update version, changelog, installation instructions and public verification.
 4. Build the small launcher and test with external CPU/GPU Python environments.
-5. Publish only the clean application source and intended release assets. Exclude
+5. Publish only the application source and intended release assets. Exclude
    local results, credentials, environment selections and machine-specific logs.
-6. Attach the Windows ZIP, executable, clean source ZIP and their SHA-256 checksums
+6. Attach the Windows ZIP, executable, source ZIP and their SHA-256 checksums
    to a versioned GitHub release. The repository's automatic source archives also
    provide the exact tagged application source.
-
-## Project metadata
-
-Suggested description: Optical neural network (ONN) and D2NN design lab: train
-metasurfaces, optical logic gates and OAM with RS/ASM propagation, PyTorch and CUDA.
-
-Relevant topics: optical-neural-network, onn, d2nn, diffractive-neural-network,
-metasurface, optical-logic-gates, rayleigh-sommerfeld, angular-spectrum-method,
-computational-optics, photonics, optical-computing, pytorch, cuda, terahertz.
-Use accurate, descriptive terminology. Search indexing and project popularity
-are controlled by GitHub, search engines and the community.

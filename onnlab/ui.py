@@ -214,7 +214,7 @@ class Window(W.QMainWindow):
         self.device_label=label("CUDA / ONLINE" if gpu else "CPU / READY","telemetry");r.addWidget(self.device_label)
         gpu_name=torch.cuda.get_device_name(0) if gpu else "Automatic CPU fallback"
         r.addWidget(label(gpu_name,"muted",True));r.addSpacing(18)
-        r.addWidget(label("RS INTEGRAL\nPHASE-ONLY SURFACES\nLOCAL • OFFLINE • v1.1","muted",True))
+        r.addWidget(label("RS INTEGRAL\nPHASE-ONLY SURFACES\nLOCAL • OFFLINE • v1.1.2","muted",True))
         r.addWidget(label("Made by Ali Nadarloo","muted",True))
         layout.addWidget(rail)
         main=W.QVBoxLayout();main.setContentsMargins(27,25,27,20);main.setSpacing(16);layout.addLayout(main,1)

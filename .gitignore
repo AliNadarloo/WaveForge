@@ -20,9 +20,9 @@ preserved_user_files/
 *_error.log
 launcher_settings.json
 ui_preferences.json
-# Local paper snapshots are optional audit fixtures, not part of the public runtime.
+# Optional paper-reference test fixtures.
 reference/
-# Keep public verification summaries, not large runs or local-machine manifests.
+# Validation summaries.
 verification/**
 !verification/README.md
 !verification/public_summary.json

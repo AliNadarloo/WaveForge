@@ -248,7 +248,7 @@ one surface, [1.2,10.8] λ spacings, Dense RS, zero initial phases and 3,000 Ada
 epochs at 0.008. The preset includes the original apertures, class weights,
 detectors and loss. Channel 1 trains OR/AND/XOR/BUFFER; channel 2 trains
 NOR/NAND/XNOR/NOT. Hardware-dependent floating-point changes can slightly alter
-final phases. The included verification report records measured agreement.</p>'''
+final phases. VERIFICATION.md gives the measured agreement.</p>'''
 }
 
 

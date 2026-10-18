@@ -30,7 +30,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python build.py --output release/Waveforge
+      - run: python package.py
       - uses: actions/upload-artifact@v4
         with:
           name: Waveforge-Windows
-          path: release/Waveforge/
+          path: delivery/

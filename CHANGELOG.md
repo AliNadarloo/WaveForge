@@ -1,6 +1,11 @@
 <!-- Made by Ali Nadarloo. -->
 # Changelog
 
+## 1.1.2 — 2026-10-18
+
+- Updated installation, development and numerical validation documentation.
+- Windows and source packages can be built directly from the public repository.
+
 ## 1.1.1 — 2026-10-18
 
 - Saved figures follow the current Appearance theme and field color maps.

@@ -20,8 +20,8 @@ python -m pytest tests -q
 ```
 
 CPU is enough to contribute. CUDA-specific comparisons run only when CUDA is
-available. Optional original-paper snapshots are local audit fixtures; their
-regression cases skip when reference/ is absent from a public checkout.
+available. Paper-reference comparisons use optional files in `reference/`.
+Those comparisons are skipped when the required files are unavailable.
 
 ## Make a change
 

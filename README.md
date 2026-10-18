@@ -204,7 +204,7 @@ row/column blocks for other sizes. Complementary gates require separate channels
 because they share an input aperture. The app trains channels separately and does
 not simulate anisotropic cell geometry, polarization conversion or CST full-wave
 behavior. Numerical precision, hardware and PyTorch versions can change a long
-optimization trajectory. See the verification report for measured agreement,
+optimization trajectory. See VERIFICATION.md for measured agreement,
 rather than assuming bit-identical phase maps on every device. The historical
 `_organized/code/Train.py` has intermediate settings; it is not the paper preset.
 
